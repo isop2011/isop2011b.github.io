@@ -1,0 +1,95 @@
+@charset "utf-8";
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+a{
+text-decoration: none;
+}
+img{
+vertical-align: bottom;
+max-width: 100%;
+}
+h1{
+text-align: center;
+margin: 40px 0;
+}
+.column-wrapper{
+width: 90%;
+margin: 0 auto 100px;
+columns: 4;/* 列数の設定 */
+gap: 30px;
+}
+.box{
+break-inside: avoid;/* 要素の中で改行させない */
+background-color: rgb(245, 134, 134);
+padding: 20px;
+border-radius: 8px;
+margin-bottom: 30px;
+}
+.photo{
+margin-bottom: 10px;
+
+}
+.photo img{
+border-radius: 8px;
+}
+.txt{
+line-height: 1.8;
+}
+#more-btn{
+display: none;
+}
+
+/* 960px以下は3カラム */
+@media(max-width:960px){
+.column-wrapper{
+width: 96%;
+columns: 3;
+gap: 20px;
+}
+.box{
+margin-bottom: 20px;
+}
+}
+
+
+
+/* 640px以下は2カラム */
+@media(max-width:640px){
+.column-wrapper{
+columns: 2;
+gap: 16px;
+}
+.box{
+padding: 10px;
+margin-bottom: 20px;
+}
+.box:nth-of-type(n+9){
+display: none;
+}
+#more-btn{
+display: block;
+margin-bottom: 60px;
+}
+
+
+/* ボタンのスニペット */
+
+.button05 a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 300px;
+  color: rgb(247, 247, 247);
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #fa0404;
+  box-shadow: 0 5px 0 #1f1e1e;
+  transition: 0.3s;
+}
+}
+
